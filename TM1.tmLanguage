@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>name</key>
+    <string>TM1</string>
+    <key>scopeName</key>
+    <string>source.tm1</string>
+    <key>fileTypes</key>
+    <array>
+        <string>rux</string>
+        <string>pro</string>
+    </array>
+    <key>uuid</key>
+    <string>34682cba-9642-433a-9e71-66d681d9ca67</string>
+
+    <!--code folding-->
+    <key>foldingStartMarker</key>
+    <string>^\s*(if|IF|If|while|WHILE|While)(?=\s)</string>
+    <key>foldingStopMarker</key>
+    <string>^\s*(endif|ENDIF|EndIf|end|END|End)(?=\s*)</string>
+
+    <key>patterns</key>
+    <array>
+        <dict>
+            <key>captures</key>
+            <dict>
+                <key>1</key>
+                <dict>
+                    <key>name</key>
+                    <string>punctuation.definition.comment.tm1</string>
+                </dict>
+            </dict>
+            <key>match</key>
+            <string>(\s)*(#).*$\n?</string>
+            <key>name</key>
+            <string>comment</string>
+        </dict>
+        <dict>
+            <key>begin</key>
+            <string>'</string>
+            <key>end</key>
+            <string>'</string>
+            <key>name</key>
+            <string>string.quoted</string>
+        </dict>
+        <dict>
+            <key>match</key>
+            <string>\b(?i:if|else(if)*|while|endif|end)(?![$])\b</string>
+            <key>name</key>
+            <string>keyword.control</string>
+        </dict>
+        <dict>
+            <key>match</key>
+            <string>(&apos;|\-|&quot;|%|&amp;|\(|\)|\*|,|/|:|;|@|\[|\\|\]|^|\||~|\+|&lt;|=|&gt;)</string>
+            <key>name</key>
+            <string>keyword.operator</string>
+        </dict>
+        <dict>
+            <key>match</key>
+            <string>(?&lt;!\.)\b(DATE|DATES|DAY|DAYNO|MONTH|TIMST|TIMVL|TODAY|YEAR|ATTRN|ATTRS|CONSOLIDATECHILDREN|DIMNM|DIMSIZ|DNEXT|DNLEV|TABDIM|DIMIX|DTYPE|ELCOMP|ELCOMPN|ELISPAR|ELLEV|ELPAR|ELPARN|ELWEIGHT|FV|PAYMT|PV|ABS|ACOS|ASIN|ATAN|COS|EXP|INT|ISUND|LN|LOG|MAX|MIN|MOD|RAND|ROUND|ROUNDP|SIGN|SIN|SQRT|TAN|CAPIT|CHAR|CODE|DELET|FILL|INSRT|LONG|LOWER|NUMBR|SCAN|STR|SUBST|TRIM|UPPER|ASCIIDELETE|ASCIIOUTPUT|SETINPUTCHARACTERSET|SETOUTPUTCHARACTERSET|TEXTOUTPUT|ATTRDELETE|ATTRINSERT|ATTRPUTN|ATTRPUTS|SETCHOREVERBOSEMESSAGES|ADDCUBEDEPENDENCY|CELLGETN|CELLGETS|CELLISUPDATEABLE|CELLPUTN|CELLPUTPROPORTIONALSPREAD|CELLPUTS|CUBECLEARDATA|CUBECREATE|CUBEDESTROY|CUBEEXISTS|CUBEGETLOGCHANGES|CUBESETCONNPARAMS|CUBESETLOGCHANGES|CUBEUNLOAD|CUBEDATARESERVATIONACQUIRE|CUBEDATARESERVATIONRELEASE|CUBEDATARESERVATIONRELEASEALL|CUBEDATARESERVATIONGET|CUBEDATARESERVATIONGETCONFLICTS|DIMENSIONCREATE|DIMENSIONDELETEALLELEMENTS|DIMENSIONDESTROY|DIMENSIONELEMENTCOMPONENTADD|DIMENSIONELEMENTCOMPONENTDELETE|DIMENSIONELEMENTDELETE|DIMENSIONELEMENTINSERT|DIMENSIONELEMENTPRINCIPALNAME|DIMENSIONEXISTS|DIMENSIONSORTORDER|ODBCCLOSE|ODBCOPEN|ODBCOPENEX|ODBCOUTPUT|EXECUTECOMMAND|EXECUTEPROCESS|PROCESSEXITBYCHOREQUIT|PROCESSEXITNORMAL|PROCESSEXITMINORERROR|PROCESSEXITBYQUIT|PROCESSEXITWITHMESSAGE|PROCESSEXITSERIOUSERROR|PROCESSEXITONINIT|PROCESSEXITBYBREAK|GETPROCESSNAME|ITEMREJECT|CUBEPROCESSFEEDERS|FORCESKIPCHECK|RULELOADFROMFILE|SERVERACTIVESANDBOXGET|SERVERACTIVESANDBOXSET|GETUSEACTIVESANDBOXPROPERTY|SETUSEACTIVESANDBOXPROPERTY|ADDCLIENT|ADDGROUP|ASSIGNCLIENTTOGROUP|ASSIGNCLIENTPASSWORD|DELETECLIENT|DELETEGROUP|ELEMENTSECURITYGET|ELEMENTSECURITYPUT|REMOVECLIENTFROMGROUP|BATCHUPDATEFINISH|BATCHUPDATEFINISHWAIT|DISABLEBULKLOADMODE|ENABLEBULKLOADMODE|SERVERSHUTDOWN|SUBSETALIASSET|SUBSETCREATE|SUBSETCREATEBYMDX|SUBSETDELETEALLELEMENTS|SUBSETDESTROY|SUBSETELEMENTDELETE|SUBSETELEMENTINSERT|SUBSETEXISTS|SUBSETEXPANDABOVESET|SUBSETFORMATSTYLESET|SUBSETGETELEMENTNAME|SUBSETGETSIZE|SUBSETISALLSET|PUBLISHVIEW|VIEWCOLUMNDIMENSIONSET|VIEWCOLUMNSUPPRESSZEROESSET|VIEWCONSTRUCT|VIEWCREATE|VIEWDESTROY|VIEWEXISTS|VIEWEXTRACTSKIPCALCSET|VIEWEXTRACTSKIPRULEVALUESSET|VIEWEXTRACTSKIPZEROESSET|VIEWROWDIMENSIONSET|VIEWROWSUPPRESSZEROESSET|VIEWSUBSETASSIGN|VIEWSUPPRESSZEROESSET|VIEWSUBSETASSIGN|VIEWSUPPRESSZEROESSET|VIEWTITLEDIMENSIONSET|VIEWTITLEELEMENTSET|VIEWZEROOUT|ADDINFOCUBERESTRICTION|EXPAND|FILEEXISTS|NUMBERTOSTRING|NUMBERTOSTRINGEX|REFRESHMDXHIERARCHY|STRINGTONUMBER|STRINGTONUMBEREX|TM1USER|WILDCARDFILESEARCH|NUMERICGLOBALVARIABLE|STRINGGLOBALVARIABLE|NUMERICSESSIONVARIABLE|STRINGSESSIONVARIABLE|date|dates|day|dayno|month|timst|timvl|today|year|attrn|attrs|consolidatechildren|dimnm|dimsiz|dnext|dnlev|tabdim|dimix|dtype|elcomp|elcompn|elispar|ellev|elpar|elparn|elweight|fv|paymt|pv|abs|acos|asin|atan|cos|exp|int|isund|ln|log|max|min|mod|rand|round|roundp|sign|sin|sqrt|tan|capit|char|code|delet|fill|insrt|long|lower|numbr|scan|str|subst|trim|upper|asciidelete|asciioutput|setinputcharacterset|setoutputcharacterset|textoutput|attrdelete|attrinsert|attrputn|attrputs|setchoreverbosemessages|addcubedependency|cellgetn|cellgets|cellisupdateable|cellputn|cellputproportionalspread|cellputs|cubecleardata|cubecreate|cubedestroy|cubeexists|cubegetlogchanges|cubesetconnparams|cubesetlogchanges|cubeunload|cubedatareservationacquire|cubedatareservationrelease|cubedatareservationreleaseall|cubedatareservationget|cubedatareservationgetconflicts|dimensioncreate|dimensiondeleteallelements|dimensiondestroy|dimensionelementcomponentadd|dimensionelementcomponentdelete|dimensionelementdelete|dimensionelementinsert|dimensionelementprincipalname|dimensionexists|dimensionsortorder|odbcclose|odbcopen|odbcopenex|odbcoutput|executecommand|executeprocess|processexitbychorequit|processexitnormal|processexitminorerror|processexitbyquit|processexitwithmessage|processexitseriouserror|processexitoninit|processexitbybreak|getprocessname|itemreject|cubeprocessfeeders|forceskipcheck|ruleloadfromfile|serveractivesandboxget|serveractivesandboxset|getuseactivesandboxproperty|setuseactivesandboxproperty|addclient|addgroup|assignclienttogroup|assignclientpassword|deleteclient|deletegroup|elementsecurityget|elementsecurityput|removeclientfromgroup|batchupdatefinish|batchupdatefinishwait|disablebulkloadmode|enablebulkloadmode|servershutdown|subsetaliasset|subsetcreate|subsetcreatebymdx|subsetdeleteallelements|subsetdestroy|subsetelementdelete|subsetelementinsert|subsetexists|subsetexpandaboveset|subsetformatstyleset|subsetgetelementname|subsetgetsize|subsetisallset|publishview|viewcolumndimensionset|viewcolumnsuppresszeroesset|viewconstruct|viewcreate|viewdestroy|viewexists|viewextractskipcalcset|viewextractskiprulevaluesset|viewextractskipzeroesset|viewrowdimensionset|viewrowsuppresszeroesset|viewsubsetassign|viewsuppresszeroesset|viewsubsetassign|viewsuppresszeroesset|viewtitledimensionset|viewtitleelementset|viewzeroout|addinfocuberestriction|expand|fileexists|numbertostring|numbertostringex|refreshmdxhierarchy|stringtonumber|stringtonumberex|tm1user|wildcardfilesearch|numericglobalvariable|stringglobalvariable|numericsessionvariable|stringsessionvariable|Date|Dates|Day|DayNo|Month|TimSt|TimVl|Today|Year|Attrn|Attrs|ConsolidateChildren|DimNm|DimSiz|DNext|DNLev|DNlev|TabDim|Dimix|DType|ElComp|ElCompN|ElCompn|ElIsPar|ElLev|ElPar|ElParN|ElWeight|Fv|Paymt|Pv|Abs|Acos|Asin|Atan|Cos|Exp|Int|IsUnd|Ln|Log|Max|Min|Mod|Rand|Round|RoundP|Sign|Sin|Sqrt|Tan|Capit|Char|Code|Delet|Fill|Insrt|Long|Lower|Numbr|Scan|Str|SubSt|SubST|Trim|Upper|ASCIIDelete|ASCIIOutput|SetInputCharacterSet|SetOutputCharacterSet|TextOutput|AttrDelete|AttrInsert|AttrPutN|AttrPuts|SetChoreVerboseMessages|AddCubeDependency|CellGetN|CellGetS|CellIsUpdateable|CellPutN|CellPutProportionalSpread|CellPutS|CubeClearData|CubeCreate|CubeDestroy|CubeExists|CubeGetLogChanges|CubeSetConnParams|CubeSetLogChanges|CubeUnload|CubeDataReservationAcquire|CubeDataReservationRelease|CubeDataReservationReleaseAll|CubeDataReservationGet|CubeDataReservationGetConflicts|DimensionCreate|DimensionDeleteAllElements|DimensionDestroy|DimensionElementComponentAdd|DimensionElementComponentDelete|DimensionElementDelete|DimensionElementInsert|DimensionElementPrincipalName|DimensionExists|DimensionSortOrder|ODBCClose|ODBCOpen|ODBCOpenEx|ODBCOutput|ExecuteCommand|ExecuteProcess|ProcessExitByChoreQuit|ProcessExitNormal|ProcessExitMinorError|ProcessExitByQuit|ProcessExitWithMessage|ProcessExitSeriousError|ProcessExitOnInit|ProcessExitByBreak|GetProcessName|ItemReject|CubeProcessFeeders|ForceSkipCheck|RuleLoadFromFile|ServerActiveSandboxGet|ServerActiveSandboxSet|GetUseActiveSandboxProperty|SetUseActiveSandboxProperty|AddClient|AddGroup|AssignClientToGroup|AssignClientPassword|DeleteClient|DeleteGroup|ElementSecurityGet|ElementSecurityPut|RemoveClientFromGroup|BatchUpdateFinish|BatchUpdateFinishWait|DisableBulkLoadMode|EnableBulkLoadMode|ServerShutDown|SubsetAliasSet|SubsetCreate|SubsetCreateByMdx|SubsetDeleteAllElements|SubsetDestroy|SubsetElementDelete|SubsetElementInsert|SubsetExists|SubsetExpandAboveSet|SubsetFormatStyleSet|SubsetGetElementName|SubsetGetSize|SubsetIsAllSet|PublishView|ViewColumnDimensionSet|ViewColumnSuppressZeroesSet|ViewConstruct|ViewCreate|ViewDestroy|ViewExists|ViewExtractSkipCalcSet|ViewExtractSkipRuleValuesSet|ViewExtractSkipZeroesSet|ViewRowDimensionSet|ViewRowSuppressZeroesSet|ViewSubsetAssign|ViewSuppressZeroesSet|ViewSubsetAssign|ViewSuppressZeroesSet|ViewTitleDimensionSet|ViewTitleElementSet|ViewZeroOut|AddInfoCubeRestriction|Expand|FileExists|NumberToString|NumberToStringEx|RefreshMdxHierarchy|StringToNumber|StringToNumberEx|Tm1User|TM1User|WildCardFileSearch|WildcardFileSearch|NumericGlobalVariable|StringGlobalVariable|NumericSessionVariable|StringSessionVariable|DB|Db|db)\b</string>
+            <key>name</key>
+            <string>support.function.builtin.tm1.keys1</string>
+        </dict>
+        <dict>
+            <key>match</key>
+            <string>(?&lt;!\.)\b(NOW|TIME|CONTINUE|ELSE|ELSEIF|CHOREQUIT|ITEMSKIP|PROCESSBREAK|PROCESSERROR|PROCESSQUIT|DELETEALLPERSISTENTFEEDERS|SECURITYREFRESH|BATCHUPDATESTART|now|time|continue|else|elseif|chorequit|itemskip|processbreak|processerror|processquit|deleteallpersistentfeeders|securityrefresh|batchupdatestart|Now|Time|Continue|Else|ElseIf|ChoreQuit|ItemSkip|ProcessBreak|ProcessError|ProcessQuit|DeleteAllPersistentFeeders|SecurityRefresh|BatchUpdateStart|ISLEAF|UNDEF|UNDEFVALS|STET|isleaf|undef|undefvals|stet|IsLeaf|Undef|UndefVals|Stet)\b</string>
+            <key>name</key>
+            <string>support.function.builtin.tm1.keys2</string>
+        </dict>
+        <dict>
+            <key>match</key>
+            <string>(?&lt;!\.)\b(SETODBCUNICODEINTERFACE|GETPROCESSERRORFILEDIRECTORY|GETPROCESSERRORFILENAME|index|DATASOURCESAPUSINGROLEAUTHS|DATASOURCESAPUSINGTEXTS|DATASOURCENAMEFORSERVER|DATASOURCENAMEFORCLIENT|DATASOURCETYPE|DATASOURCEUSERNAME|DATASOURCEPASSWORD|DATASOURCEQUERY|DATASOURCECUBEVIEW|DATASOURCEDIMENSIONSUBSET|DATASOURCEASCIIDELIMITER|DATASOURCEASCIIDECIMALSEPARATOR|DATASOURCEASCIITHOUSANDSEPARATOR|DATASOURCEASCIIQUOTECHARACTER|DATASOURCEASCIIHEADERRECORDS|VALUE_IS_STRING|NVALUE|SVALUE|ONMINORERRORDOITEMSKIP|MINORERRORLOGMAX|DATASOURCEODBOCATALOG|DATASOURCEODBOCONNECTIONSTRING|DATASOURCEODBOCUBENAME|DATASOURCEODBOHIERARCHYNAME|DATASOURCEODBOLOCATION|DATASOURCEODBOPROVIDER|DATASOURCEODBOSAPCLIENTID|DATASOURCEODBOSAPCLIENTLANGUAGE|DATAMINORERRORCOUNT|METADATAMINORERRORCOUNT|PROCESSRETURNCODE|PROLOGMINORERRORCOUNT|setodbcunicodeinterface|getprocesserrorfiledirectory|getprocesserrorfilename|index|datasourcesapusingroleauths|datasourcesapusingtexts|datasourcenameforserver|datasourcenameforclient|datasourcetype|datasourceusername|datasourcepassword|datasourcequery|datasourcecubeview|datasourcedimensionsubset|datasourceasciidelimiter|datasourceasciidecimalseparator|datasourceasciithousandseparator|datasourceasciiquotecharacter|datasourceasciiheaderrecords|value_is_string|nvalue|svalue|onminorerrordoitemskip|minorerrorlogmax|datasourceodbocatalog|datasourceodboconnectionstring|datasourceodbocubename|datasourceodbohierarchyname|datasourceodbolocation|datasourceodboprovider|datasourceodbosapclientid|datasourceodbosapclientlanguage|dataminorerrorcount|metadataminorerrorcount|processreturncode|prologminorerrorcount|SetODBCUnicodeInterface|GetProcessErrorFileDirectory|GetProcessErrorFilename|Index|DataSourceSAPUsingRoleAuths|DataSourceSAPUsingTexts|DataSourceNameForServer|DataSourceNameForClient|DataSourceType|DataSourceUserName|DataSourcePassword|DataSourceQuery|DataSourceCubeView|DataSourceDimensionSubset|DataSourceASCIIDelimiter|DataSourceAsciiDecimalSeparator|DataSourceASCIIThousandSeparator|DataSourceASCIIQuoteCharacter|DataSourceASCIIHeaderRecords|Value_Is_String|NValue|SValue|OnMinorErrorDoItemSkip|MinorErrorLogMax|DataSourceODBOCatalog|DataSourceODBOConnectionString|DataSourceODBOCubeName|DataSourceODBOHierarchyName|DataSourceODBOLocation|DataSourceODBOProvider|DataSourceODBOSAPClientID|DataSourceODBOSAPClientLanguage|DataMinorErrorCount|MetaDataMinorErrorCount|ProcessReturnCode|PrologMinorErrorCount)\b</string>
+            <key>name</key>
+            <string>support.function.builtin.tm1.keys3</string>
+        </dict>
+        <dict>
+            <key>match</key>
+            <string>(?&lt;!\.)\b(FEEDERS|FEEDSTRINGS|SKIPCHECK|feeders|feedstrings|skipcheck|Feeders|Feedstrings|Skipcheck)\b</string>
+            <key>name</key>
+            <string>support.function.builtin.tm1.keys4</string>
+        </dict>
+        <dict>
+            <key>match</key>
+            <string>\d+\b</string>
+            <key>name</key>
+            <string>constant.numeric</string>
+        </dict>
+    </array>
+</dict>
+</plist>
