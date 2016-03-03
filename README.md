@@ -1,4 +1,4 @@
-# Syntax hightlight and custom color theme for IBM Cognos TM1 language
+# Syntax hightlight and custom color theme for IBM Cognos TM1
 # for Sublime Text 2 and 3
 
 * Install
